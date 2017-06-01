@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var arr = [12,3,4,56,78,90,9,876,54,32];
+	//最小值
+	//第一次
+	for(var i=0;i<arr.length;i++){
+		var index = findMin(arr,i); //得到最小的索引值
+		var tmp = arr[i];
+		arr[i] = arr[index];
+		arr[index] = tmp;
+	}
+	
+	
+	function findMin(arr,start){
+		var nMin = 9999999;
+		var nMinIndex = -1;
+		for(var i=start;i<arr.length;i++){
+			if(arr[i]<nMin){
+				nMin = arr[i];
+				nMinIndex = i;
+			}
+		}
+		return nMinIndex;
+	}
+	alert(arr);
+</script>
+</head>
+
+<body>
+</body>
+</html>

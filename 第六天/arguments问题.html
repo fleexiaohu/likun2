@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	function show(a,b,c){
+		//alert(arguments.length);	
+		//alert(arguments[0]);
+		//alert(arguments[1]);
+		//alert(arguments[2]);
+		var total = 0;
+		for(var i=0;i<arguments.length;i++){
+			total+=arguments[i];
+		}
+		return total;
+	}
+	
+	alert(show(1,2,3));
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

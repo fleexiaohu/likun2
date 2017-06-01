@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var oNow  = new Date(); //现在的时间
+	var oFuture = new Date(); //将来的时间
+	oFuture.setMonth(4,1);
+	oFuture.setHours(0,0,0,0);
+	var total = parseInt((oFuture.getTime() - oNow.getTime())/1000);
+	//获取天数
+	var Day = parseInt(total/86400);
+	total%=86400;
+	var Hour = parseInt(total/3600);
+	total%=3600;
+	var M = parseInt(total/60);
+	total%=60;
+	var S = total;
+	alert('距离五月还有'+Day+'天'+Hour+'时'+M+'分'+S+'秒');
+</script>
+</head>
+
+<body>
+</body>
+</html>

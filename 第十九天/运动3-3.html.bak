@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:150px;height:150px;background:#ccc;position:absolute;top:100px;left:100px;}
+</style>
+<script>
+window.onload = function(){
+	//获取元素
+	var oDiv = document.getElementById('div');
+	//总时间
+	var time = 1000;
+	//总次数
+	var count = Math.floor(1000/30);
+	//当前次数
+	var n = -5;
+	//起点
+	var start = 100;
+	//终点
+	var target = 500;
+	//距离	
+	var dis = target - start;
+	
+	oDiv.onclick = function(){
+		var timer = setInterval(function(){
+			n++;
+			oDiv.style.left = start+dis*n/count+'px';
+			if(n==count){
+				clearInterval(timer);
+				
+			}	
+		},30);
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div"></div>
+</body>
+</html>

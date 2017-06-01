@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+div {width:100px;height:100px;background:#ccc;}
+</style>
+<script>
+window.onload=function (){
+	var oDiv=document.getElementById('div1');
+	
+	if (window.navigator.userAgent.toLowerCase().indexOf('firefox') != -1)
+	{
+		oDiv.addEventListener('DOMMouseScroll', function (ev){
+			var down=ev.detail>0 ? true : false;
+			
+			if (down)
+			{
+				oDiv.style.height=oDiv.offsetHeight+10+'px';
+			}else{
+				oDiv.style.height=oDiv.offsetHeight-10+'px';
+			}
+			
+		}, false);
+	}
+	else
+	{
+		oDiv.onmousewheel=function (){
+			var down=event.wheelDelta>0 ? false : true;
+			
+			if (down)
+			{
+				oDiv.style.height=oDiv.offsetHeight+10+'px';
+			}else{
+				oDiv.style.height=oDiv.offsetHeight-10+'px';
+			}
+		};
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

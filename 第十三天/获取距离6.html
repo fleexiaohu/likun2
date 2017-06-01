@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	.box{width:400px;height:400px;background:#ccc;margin:50px;position:absolute;top:10px;left:10px;}
+	.box2{width:300px;height:300px;background:#666;margin-left:20px;}
+	#div{width:100px;height:100px;background:#f90;margin-left:10px;border:5px solid #000;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div');
+	oDiv.onclick = function(){
+		alert(oDiv.offsetTop);	
+	};	
+};
+</script>
+</head>
+
+<body>
+	<div class="box">
+    	<div class="box2">
+        	<div id="div">
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

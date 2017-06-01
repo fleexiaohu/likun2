@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	//alert();
+	document.body.style.background = '#ccc';
+	
+	window.onresize = function(){
+		var oW = document.documentElement.clientWidth;
+		var sColor = '';
+		if(oW > 640){
+			sColor = 'yellow';
+		}else if(oW > 320){
+			sColor = '#f90';
+		}else{
+			sColor = 'pink';
+		}
+		document.body.style.background = sColor;
+	}
+};
+</script>
+</head>
+
+<body>
+	
+</body>
+</html>

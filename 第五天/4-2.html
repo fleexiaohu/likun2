@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body { text-align:center; }
+textarea { width:300px; height:150px; }
+</style>
+<script>
+//{"value1":"a","value2":"b","value3":"c","value4":"a","value5":"b"}
+window.onload = function(){
+	var oT = document.getElementById('t1');
+	var oBtn = document.getElementById('btn');
+	oBtn.onclick = function(){
+		var str = oT.value;
+		//alert(str);
+		//?value1=a&value2=b&value3=c&value4=a&value5=b
+		str = str.substring(1);
+		//alert(str);
+		//value1=a&value2=b&value3=c&value4=a&value5=b
+		var arr = str.split('&');
+		//alert(arr);
+		//value1=a,value2=b,value3=c,value4=a,value5=b
+		var json = {};
+		for(var i=0;i<arr.length;i++){
+			var oTmp = arr[i].split('=');
+			json[oTmp[0]] = oTmp[1];
+		}
+		alert(JSON.stringify(json));
+	};
+	
+};
+</script>
+</head>
+
+<body>
+	<textarea id="t1">?value1=a&value2=b&value3=c&value4=a&value5=b</textarea><br /><br />
+	<input type="button" value="变" id="btn" /><br /><br />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

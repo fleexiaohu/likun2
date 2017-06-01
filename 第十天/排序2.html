@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var arr = [12,3,4,56,78,90,9,876,54,32];
+	//最小值
+	var nMin = 99999;
+	var nMinIndex = -1;
+	for(var i=0;i<arr.length;i++){
+		if(arr[i]<nMin){
+			nMin = arr[i];
+			nMinIndex = i;
+		}
+	}
+	var tmp = arr[0]; //tmp = 12;
+	//12 = 3 arr[0]=3;
+	arr[0] = arr[nMinIndex];
+	//arr[1] = 12;
+	arr[nMinIndex] = tmp; //12
+	//换位置
+	alert(arr);
+	//alert(nMinIndex);
+	//alert(nMin);
+</script>
+</head>
+
+<body>
+</body>
+</html>

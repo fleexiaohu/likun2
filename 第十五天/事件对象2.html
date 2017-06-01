@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:4px;height:4px;background:red;position:absolute;top:50%;left:50%;margin-left:-2px;margin-top:-2px;}
+</style>
+<script>
+window.onload = function(){
+	document.onclick = function(ev){
+		
+		alert(ev.clientX);	
+		alert(ev.clientY);
+		
+		var oEvent = ev || event;
+	};	
+};
+</script>
+</head>
+
+<body>
+	<div id="box"></div>
+</body>
+</html>

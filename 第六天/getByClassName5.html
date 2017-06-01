@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	
+	function getByClassName(oParent,sClassName){
+		
+		if(oParent.getElementsByClassName){
+			return oParent.getElementsByClassName(sClassName);
+		}else{
+			var aRes = [];
+			var aChild = oParent.getElementsByTagName('*');
+			for(var i=0;i<aChild.length;i++){
+				var obj = aChild[i];
+				var aTmp = obj.className.split(' ');
+				for(var j=0;j<aTmp.length;j++){
+					//alert(aTmp[j]);
+					if(aTmp[j] == sClassName){
+						aRes.push(obj);
+					}
+				}
+			}
+			return aRes;
+		}
+	}	
+	
+	var val = getByClassName(document,'text');
+	alert(val);
+	for(var i=0;i<val.length;i++){
+		val[i].style.color = 'red';
+	}
+};
+</script>
+</head>
+
+<body>
+	<div class="box                          text">好好学习</div>
+    <div class="box              text">不要睡觉</div>
+    <p class="text">在睡觉打你啊</p>
+</body>
+</html>

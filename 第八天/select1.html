@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	var oSel = document.getElementById('sel1');
+	
+	oSel.onchange = function(){
+		var index = oSel.selectedIndex;
+		alert(index);
+	};
+	//alert(oSel.options[0].value);
+};
+</script>
+</head>
+
+<body>
+	<select id="sel1">
+    	<option value="aa">小三1号</option>
+        <option value="bb">小三2号</option>
+        <option value="cc">小三3号</option>
+        <option value="dd">小三4号</option>
+        <option value="ee">小三5号</option>
+    </select>
+</body>
+</html>

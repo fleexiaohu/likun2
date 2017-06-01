@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	var oSel = document.getElementById('sel1');
+	var oSpan = document.getElementById('span1');
+	var oPrice = ['9.9','19.8','29.7','49.5','88'];
+	oSel.onchange = function(){
+		var index = oSel.selectedIndex;
+		oSpan.innerHTML = oPrice[index]+'元';
+	};
+};
+</script>
+</head>
+
+<body>
+	<select id="sel1">	
+    	<option>10</option>
+        <option>20</option>
+        <option>30</option>
+        <option>50</option>
+        <option>100</option>
+    </select>
+    <span id="span1">9.9元</span>
+</body>
+</html>

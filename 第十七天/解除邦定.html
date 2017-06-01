@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	var oBtn = document.getElementById('btn');
+	
+	addEvent(oBtn,'click',show);
+	//oBtn.removeEventListener('click',show,false);
+	
+	//oBtn.detachEvent('onclick',show);
+	removeEvent(oBtn,'click',show);
+	function show(){
+		alert('求求你们别气我了，心肝疼啊');	
+	}
+	addEvent(oBtn,'click',function(){
+		alert('11111111111');	
+	});
+	
+	function removeEvent(obj,sEv,fnName){
+		if(obj.removeEventListner){
+			obj.removeEventListener(sEv,fnName,false);
+		}else{
+			obj.detachEvent('on'+sEv,fnName);
+		}
+	}
+	
+	function addEvent(obj,sEv,fn){
+		if(obj.addEventListener){
+			obj.addEventListener(sEv,fn,false);
+		}else{
+			obj.attachEvent('on'+sEv,fn);
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+	<input type="button" value="btn" id="btn" />
+</body>
+</html>

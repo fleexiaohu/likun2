@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	
+	if (window.navigator.userAgent.toLowerCase().indexOf('firefox') != -1)
+	{
+		// FF
+		document.addEventListener('DOMMouseScroll', function (ev){
+			var down=ev.detail>0 ? true : false;
+			alert(down);
+		}, false);
+	}
+	else
+	{
+		// 非FF
+		document.onmousewheel=function (){
+			var down=event.wheelDelta>0 ? false : true;
+			alert(down);
+		};
+	}
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

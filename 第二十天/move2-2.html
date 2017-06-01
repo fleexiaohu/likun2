@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:100px;height:100px;background:red;position:absolute;top:50px;left:50px;-opacity:0;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div');
+	move(oDiv,'left',300,2000);
+	
+	function move(obj,sName,target,time){
+		
+		var start = parseFloat(getStyle(obj,sName));
+		var dis = target - start;
+		var n = 0;
+		var count = Math.floor(time/30);
+		var timer = setInterval(function(){
+			n++;
+			if(sName == 'opacity'){
+				obj.style[sName] = start+dis*n/count;
+			}else{
+				obj.style[sName] = start+dis*n/count+'px';
+			}
+			
+			if(n == count){
+				clearInterval(timer);
+			}
+		},30);
+		
+	}
+	
+		
+	function getStyle(obj,sName){
+		return (obj.currentStyle || getComputedStyle(obj,false))[sName];
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div"></div>
+</body>
+</html>

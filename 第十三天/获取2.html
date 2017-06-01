@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	div{width:200px;height:200px;background:#ccc;margin-left:10px;margin-top:10px;border:5px solid red;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div');
+	
+	oDiv.onclick = function(){
+		//alert(this.offsetWidth);
+		alert(oDiv.offsetHeight);
+	};	
+};
+</script>
+</head>
+
+<body>
+	<div id="div"></div>
+</body>
+</html>

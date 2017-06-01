@@ -1,0 +1,11 @@
+
+onchange //改变
+
+oSel.selectedIndex; //获取索引值
+
+oSel.options.length //获取长度
+
+oSel.options.value  //获取value值
+
+oSel.options.remove(0); //删除
+

@@ -1,0 +1,49 @@
+把汉字转成编码
+	str.charCodeAt();
+把编码转成为汉字
+	String.fromCharCode();
+	a = 97
+	A = 65
+	
+	A - Z 65 - 90
+	a - z 97 - 122
+中文的取值范围
+	19968 - 40869
+	0X4E00    0X9FA5
+	
+'\u5FAE\u8F6F\u96C5\u9ED1'
+
+一个汉字占字节
+			UTF-8   3
+			GB2312  2		
+1TB=1024GB
+
+
+强制获取焦点
+	focus
+1GB=1024MB
+1MB=1024KB
+
+获取
+		children   第一层子级
+		parentNode 父级 （节点 DOM树）
+第一个
+	firstElementChild //不兼容IE8-
+	firstChild //只兼容IE8-
+	
+最后一个
+	lastElementChild   //不兼容IE8-
+	lastChild //只兼容IE8-
+	
+上一个
+	previousElementSibling //不兼容IE8-
+	previousSibling ///只兼容IE8-
+	
+下一个
+	nextElementSibling //不兼容IE8-
+	nextSibling //只兼容IE8-
+	
+	必须是 document
+			getElementById
+			createElement
+

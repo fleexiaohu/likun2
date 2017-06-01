@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	div{width:100px;height:100px;background:#f90;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('box');
+	//css(obj,'width'); css(obj,'height','400px')
+	function css(obj){
+		if(arguments.length==2){
+			if(typeof(arguments[1])=='string'){
+				//不是json
+				//alert('no');
+				var sName = arguments[1];
+				return getStyle(obj,sName);
+			}else{
+				//是josn
+				var json = arguments[1];
+				for(name in json){
+					obj.style[name] = json[name];
+				}
+			}
+		}else{
+			var sName = arguments[1];
+			var sValue = arguments[2];
+			obj.style[sName] = sValue;
+		}
+	}	
+	
+	function getStyle(obj,sName){
+		if(obj.currentStyle){
+			return obj.currentStyle[sName];
+		}else{
+			return getComputedStyle(obj,false)[sName];
+		}
+	}
+	
+	//alert(css(oDiv,'width'));
+	//css(oDiv,'height','400px');
+	css(oDiv,{
+			'width':'400px',
+			'height':'400px',
+			'lineHeight':'400px',
+			'textAlign':'center',
+			'fontSize':'30px',
+			'fontWeight':'bold',
+			'color':'white',
+			'background':'#000',
+			'border':'1px solid green',
+			'boxShadow':'5px 5px 5px 5px red',
+		});
+};
+</script>
+</head>
+
+<body>
+	<div id="box">么事别侃大山</div>
+</body>
+</html>

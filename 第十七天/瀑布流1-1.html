@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:800px;margin:0 auto;overflow:hidden;}
+ul{width:240px;margin:10px;border:1px solid red;float:left;}
+li{list-style:none;width:240px;margin:10px 0;text-align:center;font-size:50px;background:#ccc;}
+body{padding-bottom:500px;}
+</style>
+<script>
+window.onload = function(){
+	var aUl = document.getElementsByTagName('ul');	
+	
+	
+	for(var i=0;i<20;i++){
+		var oLi = document.createElement('li');
+		oLi.style.height = rnd(100,300)+'px';
+		oLi.innerHTML = i;
+		
+		//判断高度
+		if(aUl[0].offsetHeight > aUl[1].offsetHeight){
+			if(aUl[1].offsetHeight > aUl[2].offsetHeight){
+				aUl[2].appendChild(oLi);
+			}else{
+				aUl[1].appendChild(oLi);
+			}
+		}else{
+			if(aUl[0].offsetHeight > aUl[2].offsetHeight){
+				aUl[2].appendChild(oLi);
+			}else{
+				aUl[0].appendChild(oLi);
+			}
+		}
+	}
+	
+	function rnd(n,m){
+		return Math.floor(Math.random()*(m-n)+n);
+	}
+};
+</script>
+</head>
+
+<body>
+	<div>
+    	<ul></Ul>
+        <ul></ul>
+        <uL></ul>
+    </div>
+</body>
+</html>

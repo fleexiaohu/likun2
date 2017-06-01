@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var arr = [
+		{'name':'衣服','num':2},
+		{'name':'衣服2','num':12},
+		{'name':'衣服3','num':23},
+		{'name':'衣服4','num':225},
+		{'name':'衣服5','num':212},
+		{'name':'衣服6','num':2.5},
+		{'name':'衣服7','num':44},
+	];
+	
+	/*arr.sort(function(a,b){
+		return a-b;	
+	});*/
+	arr.sort(function(j1,j2){
+		return j1.num - j2.num;
+	});
+	alert(JSON.stringify(arr));
+</script>
+</head>
+
+<body>
+</body>
+</html>

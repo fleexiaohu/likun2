@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var json = {
+		'name':'小伙子你不应该打扰我上课呀',
+		'sex':'居然还说我学变现好',
+		'age':'看来那小子又',
+		'desc':'你这是一天天闲的头疼啊'	
+	};
+	
+	/*for(var i=0;i<json.length;i++){
+		alert(i);
+	}*/
+	/*for(name in json){
+		//alert(name);
+		if(name == 'sex'){
+			alert(1);
+		}
+	}*/
+	
+	if('sex' in json){
+		alert(true);
+	}else{
+		alert(false);
+	}
+</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	var oSel = document.getElementById('sel1');
+	oSel.onchange = function(){
+		var index = oSel.selectedIndex;
+		alert(oSel.options[index].text);
+	};	
+};
+</script>
+</head>
+
+<body>
+	<select id="sel1">
+    	<option>钓鱼</option>
+        <option>写作业</option>
+        <option>睡觉</option>
+        <option>吃饭</option>
+    </select>
+</body>
+</html>

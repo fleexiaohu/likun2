@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	li{width:90%;height:38px;background:#ccc;margin:10px;}
+</style>
+<script>
+window.onload = function(){
+	var oLi = document.getElementById('li2');
+	var oNew = document.createElement('li');
+	var oUl = document.getElementById('ul1');
+	oNew.style.background = 'tomato';
+	oUl.insertBefore(oNew,oLi);	
+};
+</script>
+</head>
+
+<body>
+	<ul id="ul1">
+    	<li id="li1"></li>
+        <li id="li2"></li>
+        <li id="li3"></li>
+        <li id="li4"></li>
+    </ul>
+</body>
+</html>

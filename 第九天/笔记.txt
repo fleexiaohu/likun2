@@ -1,0 +1,57 @@
+getById
+className 不兼容IE8-
+byTagName
+byName
+children
+
+undefined
+false
+null
+‘’
+0
+NaN
+
+obj
+str
+num
+undefined
+fun
+boolean
+
+obj
+arr
+null
+
+this
+	只是当前对象
+	套一套函数失效
+	
+setInterval
+	clearInterval
+setTimerOut
+	clearTimeout
+
+子函数可以用父函数的变量
+
+局部变量
+	1、局部变量可以在局部覆盖全局变量
+	2、局部变量可以使用全局的变量
+	3、全局不能使用局部的
+	4、局部变量只能在局部生效
+	5、在函数体内声明的变量未局部变量
+	
+return
+	后面的代码不执行
+	可以返回任何东西
+
+未定义
+未赋值
+未传参
+没有return
+只有return 没有值
+
+getAttribute(名字)
+setAttribute（属性名,值）
+	
+
+

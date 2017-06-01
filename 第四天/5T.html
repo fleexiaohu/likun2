@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body { font-size:20px; text-align:center; }
+span, pre { color:red; }
+</style>
+<script>
+//[name=likun, sex:男, age:18]
+window.onload = function(){
+	var oSpan = document.getElementById('val');
+	var str = oSpan.innerHTML;
+	var arr = str.split('{');
+	var arr2 = arr[1].split('}');
+	var arr3 = arr2[0];
+	alert(arr3.split(','));
+};
+
+</script>
+</head>
+
+<body>
+	<p>
+		把字符串 <span id="val">var str='{name=likun, sex:男, age:18}'</span><br /><br />
+		变成数组 <span>var arr=[name=likun, sex:男, age:18]</span>
+	</p>
+</body>
+</html>

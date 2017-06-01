@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	//FF
+	document.addEventListener('DOMMouseScroll',function(ev){
+		var oEvent = ev || event;	
+		
+		//负数 向上
+		//正数 向下
+		//alert(oEvent.detail);
+		if(oEvent.detail > 0){
+			var down = true;
+		}else{
+			var down = false;
+		}
+	},false);
+</script>
+</head>
+
+<body>
+</body>
+</html>

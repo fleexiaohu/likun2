@@ -1,0 +1,38 @@
+offsetWidth 
+	//获取盒子模型大小宽度
+offsetHeight 高度
+
+offsetLeft //获取到定位父级的距离 body
+
+offsetTop // 距上的距离
+特点：如果display：none 的话 获取不到所有关于offset的东西
+
+offsetParent //获取定位父级
+parentNode // 结构上的父级
+
+document.documentElement.clientWidth //获取可视区宽度
+document.documentElement.clientHeight //获取可视区的高度
+
+//获取滚动距离
+document.body.scrollTop //只兼容chrome
+document.documentElement.scrollTop //兼容firefox && IE
+
+//window事件
+window.onclick
+window.onload
+window.onresize //可视区发生改变的时候
+window.onscroll //滚动条滚动的时候
+
+【例子】
+	改变颜色
+
+	右下角的框
+
+	延迟加载(懒加载)
+		滚动距离
+		可视区高度
+		可视区底部
+
+	吸顶条
+
+

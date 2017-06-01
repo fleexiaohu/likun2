@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	//兼容非FF
+	document.onmousewheel = function(ev){
+		var oEvent = ev || event;
+		//alert(oEvent.wheelDelta);
+		//负数 是下
+		//正数 上
+		//alert(1);
+		if(oEvent.wheelDelta > 0){
+			//alert('s');
+			var down = false;
+		}else{
+			var down = true;
+			//alert('x');
+		}
+	};
+</script>
+</head>
+
+<body>
+</body>
+</html>

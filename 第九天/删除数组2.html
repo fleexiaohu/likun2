@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+				//0,1,2,3,4,5
+	var arr =    [1,2,4,4,4,46,8,3];
+//	[1,4,6,8,3]
+	for(var i=0;i<arr.length;i++){
+			// 1,2,3,4
+		if(arr[i]%2 == 0){
+			//alert(i);1
+			arr.splice(1,1);
+			i--;
+		}
+	}
+	
+	alert(arr);
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

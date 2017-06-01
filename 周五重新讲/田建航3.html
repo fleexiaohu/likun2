@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	if(window.navigator.userAgent.toLowerCase().indexOf('firefox') != -1){
+		//FF
+		document.addEventListener('DOMMouseScroll',function(ev){
+		var oEvent = ev || event;
+			if(oEvent.detail > 0){
+				var down = true;
+			}else{
+				var down = false;
+			}	
+			alert(down);
+		},false);
+		
+	}else{
+		//!FF
+		document.onmousewheel = function(ev){
+			var oEvent = ev || event;
+			if(oEvent.wheelDelta > 0){
+				var down = false;
+			}else{
+				var down = true;
+			}
+			alert(down);
+		};
+	}
+</script>
+</head>
+
+<body>
+</body>
+</html>

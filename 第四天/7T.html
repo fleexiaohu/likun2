@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+ul { width:200px; margin:100px auto; }
+li { margin:10px; }
+</style>
+<script>
+window.onload = function(){
+	var aSpan = document.getElementsByTagName('span');
+	var aBtn = document.getElementsByTagName('input');
+	
+	for(var i=0;i<aBtn.length;i++){
+		aBtn[i].index = i;
+		aBtn[i].onclick = function(){
+			var str = aSpan[this.index].innerHTML;
+			var arr = str.split('[');
+			if(this.value == '添加'){
+				this.value = '取消';
+				aSpan[this.index].innerHTML = arr[0]+'[已添加]';
+			}else{
+				this.value = '添加';
+				aSpan[this.index].innerHTML = arr[0]+'[未添加]';
+			}
+		};
+	}
+};
+</script>
+</head>
+
+<body>
+	<ul>
+		<li>
+			<span>花生----[未添加]</span>
+			<input type="button" value="添加" />
+		</li>
+		
+		<li>
+			<span>西瓜----[已添加]</span>
+			<input type="button" value="取消" />
+		</li>
+		
+		<li>
+			<span>芒果----[未添加]</span>
+			<input type="button" value="添加" />
+		</li>
+		
+		<li>
+			<span>黄瓜----[未添加]</span>
+			<input type="button" value="添加" />
+		</li>
+	</ul>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

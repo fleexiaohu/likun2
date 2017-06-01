@@ -1,0 +1,29 @@
+onmousewheel
+	触发时机（鼠标滚动的时候）兼容非FF
+	oEvent.wheelDelta
+		下
+			负数
+		上
+			正数
+			
+	oEvent.detail 兼容FF
+		下
+			正数
+		上
+			负数
+	
+DOMMouseScroll //鼠标滚动事件  兼容FF document下面没有
+
+【事件绑定】
+attachEvent //只兼容IE
+addEvetnListener //兼容FF chrome（谷歌）
+【事件解除绑定】
+removeEventListener // 不兼容IE8-
+detachEvent//只兼容IE8-
+
+
+
+	
+		
+	
+	

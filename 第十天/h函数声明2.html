@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var str = "{'name':'我狠爱你们','desc':'你们也很想干死我，去掉你的杠杠你没门的，士可杀不可辱'}";
+	
+	var json = new Function('return '+str)();
+	//alert(JSON.stringify(json));
+	alert(json.desc);
+</script>
+</head>
+
+<body>
+</body>
+</html>

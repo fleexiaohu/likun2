@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	//var oTxt = document.getElementsByClassName('text');
+	/*for(var i=0;i<oTxt.length;i++){
+		oTxt[i].style.color = 'red';
+	}	*/
+	function getByClassName(oParent,sClassName){
+		var aRes = [];
+		var aChild = oParent.getElementsByTagName('*');
+		for(var i=0;i<aChild.length;i++){
+			//box text  text
+			//boxtext
+			//text
+			var obj = aChild[i];
+			var oTmp = obj.className.split(' ');
+			//alert(oTmp.length);
+			for(var j=0;j<oTmp.length;j++){
+				if(oTmp[j] == sClassName){
+					aRes.push(obj);
+				}
+			}
+		}
+		return aRes;
+	}
+	
+	var val = getByClassName(document,'text');
+	//alert(val);
+	for(var i=0;i<val.length;i++){
+		val[i].style.color = 'red';
+	}
+};
+</script>
+</head>
+
+<body>
+	<div class="box text">11111111111</div>
+    <div class="boxtext">222222222222</div>
+    <p class="text">pppppppppppppppppp</p>
+</body>
+</html>

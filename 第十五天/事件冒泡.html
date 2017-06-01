@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:200px;height:200px;background:#ccc;margin:0 auto;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div1');
+	var oBtn = document.getElementById('btn');
+	
+	oDiv.onclick = function(){
+		alert('div');	
+	};	
+	
+	oBtn.onclick = function(){
+		alert('btn');	
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div1">
+    	<input type="button" value="btn" id="btn" />
+    </div>
+</body>
+</html>

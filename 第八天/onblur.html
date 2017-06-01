@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	var oT = document.getElementById('test');
+	oT.onfocus = function(){
+		this.value = '';	
+	};
+	oT.onblur = function(){
+		this.value = '原始value';	
+	};
+};
+</script>
+</head>
+
+<body>
+	<input type="text" value="原始value" id="test"/>
+    <input type="text" placeholder="现在公司用的这个玩意" />
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	var oSel = document.getElementById('sel1');
+	var oSpan = document.getElementById('span1');
+	var arr = [9.9,20,30,50,100];	
+	oSel.onchange = function(){
+		var index = oSel.selectedIndex;
+		oSpan.innerHTML = arr[index]+'元';
+	};
+};
+</script>
+</head>
+
+<body>
+	<select id="sel1">
+    	<option>10元</option>
+        <option>20元</option>
+        <option>30元</option>
+        <option>50元</option>
+        <option>100元</option>
+    </select>
+    <span id="span1">9.9￥</span>
+</body>
+</html>

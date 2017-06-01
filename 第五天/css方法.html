@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	div{width:200px;height:200px;background:#f90;}
+</style>
+<script>
+	//css 用法 css(obj,'width'),css(obj,'height','300px')
+	
+window.onload = function(){
+	var oDiv = document.getElementById('div');
+	//alert(css(oDiv,'width'));
+	css(oDiv,'height','300px')
+	css(oDiv,{
+		'width':'400px',
+		'height':'400px',
+		'background':'red',	
+	})
+	function css(obj,sName,sValue){
+		//obj+'-'+sName;
+		if(arguments.length==2){
+			return getStyle(obj,sName);
+		}else{
+			obj.style[sName] = sValue;
+		}
+	}
+	
+	function getStyle(obj,sName){
+		if(obj.currentStyle){
+			return obj.currentStyle[sName];
+		}else{
+			return getComputedStyle(obj,false)[sName];
+		}
+	}
+		
+};
+</script>
+</head>
+
+<body>
+	<div id="div"></div>
+</body>
+</html>

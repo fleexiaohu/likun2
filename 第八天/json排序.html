@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var arr = [
+		{
+			'name':'衣服',
+			'num':12,	
+		},
+		{
+			'name':'衣服1',
+			'num':3,	
+		},
+		{
+			'name':'衣服2',
+			'num':5,	
+		},
+		{
+			'name':'衣服3',
+			'num':10,	
+		},
+		{
+			'name':'衣4服',
+			'num':13,	
+		},
+	];
+	
+	arr.sort(function(p,j){
+		return p.num - j.num;	
+	});
+	alert(JSON.stringify(arr));
+	
+</script>
+</head>
+
+<body>
+</body>
+</html>

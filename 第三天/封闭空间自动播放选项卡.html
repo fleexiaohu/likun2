@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>无标题文档</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			a {
+				font-size: 28px;
+				color: #f90;
+				position: absolute;
+				top: 0;
+			}
+			
+			.box {
+				width: 300px;
+				height: 200px;
+				border: 1px solid #000;
+				margin: 50px auto;
+				text-align: center;
+				position: relative;
+			}
+			
+			#prev {
+				left: 10px;
+			}
+			
+			#next {
+				right: 10px;
+			}
+			
+			input {
+				margin-top: 15px;
+			}
+			
+			.box div {
+				width: 280px;
+				height: 146px;
+				background: #C9F;
+				text-align: center;
+				line-height: 146px;
+				font-size: 48px;
+				font-weight: bold;
+				display: none;
+				margin: 10px;
+			}
+			
+			.box .show {
+				display: block;
+			}
+			
+			.active {
+				width: 80px;
+				background: #f90;
+				color: #fff;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var aBtn = document.getElementsByTagName('input');
+				var aBox = document.getElementById('box');
+				var aDiv = aBox.getElementsByTagName('div');
+				var iNow = 0;
+				for(var i = 0; i < aBtn.length; i++) {
+					(function(index) {
+						aBtn[i].onclick = function() {
+							for(var i = 0; i < aBtn.length; i++) {
+								aBtn[i].className = '';
+								aDiv[i].className = '';
+							}
+							//改变iNow初始值
+							iNow = index;
+							aDiv[index].className = 'show';
+							this.className = 'active';
+						};
+					})(i);
+
+				}
+				//自动播放
+				var timer = setInterval(next, 1000);
+				aBox.onmouseover = function() {
+					clearInterval(timer);
+				};
+				//鼠标移出开启定时器
+				aBox.onmouseout = function() {
+					timer = setInterval(next, 1000);
+				};
+				//上一个
+				var oPrev = document.getElementById('prev');
+
+				oPrev.onclick = prev;
+
+				//下一个
+				var oNext = document.getElementById('next');
+				oNext.onclick = next;
+
+				//把上一个下一个封装成函数
+				function prev() {
+					iNow--;
+					//alert(oNow);
+					if(iNow == -1) {
+						iNow = aBtn.length - 1;
+					}
+					tab();
+				}
+				//把下一个封装成函数
+				function next() {
+					iNow++;
+					//alert(iNow);
+					if(iNow == aBtn.length) {
+						iNow = 0;
+					}
+					tab();
+				}
+				//提出来切换部分
+				function tab() {
+					for(var i = 0; i < aBtn.length; i++) {
+						aBtn[i].className = '';
+						aDiv[i].className = '';
+					}
+					aBtn[iNow].className = 'active';
+					aDiv[iNow].className = 'show';
+				}
+			};
+		</script>
+	</head>
+
+	<body>
+		<div class="box" id="box">
+			<a href="javascript:;" id="prev">☜</a>
+			<a href="javascript:;" id="next">☞</a>
+			<input type="button" value="电影" class="active" />
+			<input type="button" value="电话" />
+			<input type="button" value="电池" />
+			<input type="button" value="电磁" />
+			<div class="show">电影</div>
+			<div>电话</div>
+			<div>电池</div>
+			<div>电磁</div>
+		</div>
+	</body>
+
+</html>

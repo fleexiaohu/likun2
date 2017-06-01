@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function(){
+	document.body.style.background = '#ccc';
+	
+	window.onresize = function(){
+		var sColor = '';
+		var oW = document.documentElement.clientWidth;
+		//alert(oW);
+		if(oW >= 750){
+			sColor = 'red';
+		}else if(oW >= 600){
+			sColor = '#f90';
+		}else if(oW >= 500){
+			sColor = 'green';
+		}else if(oW >= 400){
+			sColor = 'pink';
+		}else{
+			sColor = '#000';
+		}
+		document.body.style.background = sColor;
+	};	
+};
+</script>
+</head>
+
+<body>
+</body>
+</html>

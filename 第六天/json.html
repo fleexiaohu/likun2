@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+//alert(arr[0]['cate'][0]['cate']); //李伟的
+
+	var arr = [
+		{
+			'tit':'衣服',
+			'cate':[
+				{
+					'tit':'裤衩',
+					'price':'三毛钱'
+				},
+				{
+					'tit':'大裤衩',
+					'price':'四毛钱',
+					'cate':[
+						{
+							'color':'灰色裤衩',
+							'shop-name':'裤衩巨头'
+						}
+					]
+				},
+				{
+					'tit':'花裤衩',
+					'price':'五毛钱'
+				},
+			],
+		},
+	];
+	alert(arr[0]['cate'][1]['cate'][0]['shop-name']);
+</script>
+</head>
+
+<body>
+</body>
+</html>

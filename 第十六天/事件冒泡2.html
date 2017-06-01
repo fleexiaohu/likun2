@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:200px;height:200px;background:#ccc;margin:50px auto;position:absolute;top:100px;left:300px;}
+
+input{position:absolute;left:-100px;top:0;}
+</style>
+<script>
+window.onload = function(){
+	var oBtn = document.getElementById('btn');
+	var oDiv = document.getElementById('div');
+	
+	oBtn.onclick = function(ev){
+		var oEvent = ev || event;
+		oEvent.cancelBubble = true;
+		alert('btn');	
+	};	
+	
+	oDiv.onclick = function(){
+		alert('div');	
+	};
+};
+</script>
+</head>
+
+<body>
+	<div id="div">
+    	<input type="button" value="btn" id="btn"/>
+    </div>
+</body>
+</html>

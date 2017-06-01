@@ -1,0 +1,88 @@
+eval 
+	执行符合js语法的字符串
+【array】
+	join把数组变成字符串
+		1、不保持状态
+		2、想用这个改变过后的值，重新赋值一个新的变量
+		
+	push 对数组从后面添加一个新的元素
+	
+	unshift 对数组从前面添加个新的元素
+	
+	var arr =  new Array(5);
+	
+	pop 从后面删除一个元素 返回一个你将要从后面删除的那个元素
+	
+	shift 从前面删除一个元素 返回一个你将要从前面删除的那个元素
+	
+	concat 数组拼接
+	
+	reverse 翻转数组
+	
+	splice 
+		1、删除 从什么开始 删除的个数
+		2、添加新元素
+			从下标开始 ，0，新元素
+		3、替换
+			从下标开始 ，替换的个数，新元素---包含下标
+	sort //排序
+	alert(arr.sort(function(a,b){
+		return b-a;	//71,56,44,32,24,11,7,2
+	}));
+【字符串操作】
+	str.charAt(); //兼容所有
+	str[‘index’] //不兼容IE7-
+	document.getElementsByClassName 不兼容IE8-
+		currentStyle //兼容IE
+		getComputedStyle //兼容高级浏览器
+		box-shadow //不兼容低级浏览器
+		border-radius //不兼容底浏览器
+		opacity(0-1)//兼容高级浏览器
+		filter:alpha(opacity:0-100)
+		自定义行间样式
+			直接写在行间的 高级浏览器获取不到
+			getAttribute
+			setAttribute
+	indexOf('字符串');
+		找到的话返回当前索引值 找不到的话返回-1
+	lastIndexOf();
+	
+	toUpperCase(); //把字符串转化为大写
+	toLowerCase(); //把字符串转化为小写
+	substring(); //开始下标（包括）到结束下标（不包括）
+	substr() ;; //开始下标，长度
+	split(); //字符串变成数组 可以找规则去分割
+	var arr = 12  14  13  11  2  78
+	arr.sort(a,b)
+	
+	12  14  13  11  2  78
+
+	78  13  12  11  2  14
+	
+	78  14   12  11 2  13
+	
+	78  14   13  11 2  12
+	
+	78  14   13  12 2  11
+	
+	78  14   13  12 11  2
+	
+	//日期对象 获取月份 0-11
+	//日期对象 获取星期几 0-6
+	
+	oDate.setMonth(oDate.getMonth()+1,0);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

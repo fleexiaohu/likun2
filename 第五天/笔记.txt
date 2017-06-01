@@ -1,0 +1,128 @@
+第七题
+
+第四题
+宋艳军 10
+李伟 15
+孙ling hui 10
+xiaoqiang 10
+zhang dong 10
+
+
+1、判断浏览器类型
+	window.navigator.userAgent;
+2、这个月有多少天
+	setMonth(getMonth()+1,0);
+
+3、封闭空间
+	(function(){})(i);
+
+4、导航
+	this不是
+	children
+	
+
+5、json
+	var sb = ['a':'b'];
+	var json = {'':'','':''};
+	
+6、对话框
+	alert 消息  undefined
+	prompt 提示 
+	confirm 确认
+	
+【json】
+//纯属讲课，与国家无关
+	var data = [
+		{
+			'tit':'马华腾会见李坤',
+			'href':'www.likun.com',
+			's-tit':[
+				{
+					'tit':'以两岸和平问题进行谈判',
+					'href':'abc.html',
+					'desc':[
+						{
+							'tit1':'见面喊坤哥',
+							'href':'taiwan.com',	
+						},
+						{
+							'tit2':'没得商量',
+							'desc':'台湾是中国的',
+							'test':[
+								{
+									'tit':'实在不会编了',
+									'desc':'在中国不要谈论中国政治敏感话题，纯属讲课，如有雷同，还是讲课1'	
+								}
+							]	
+						}
+					]
+				}
+			]	
+		},
+		
+		{
+			'tit':'马华腾会见李坤',
+			'href':'www.likun.com',
+			's-tit':[
+				{
+					'tit':'以两岸和平问题进行谈判',
+					'href':'abc.html',
+					'desc':[
+						{
+							'tit1':'见面喊坤哥',
+							'href':'taiwan.com',	
+						},
+						{
+							'tit2':'没得商量',
+							'desc':'台湾是中国的',
+							'test':[
+								{
+									'tit':'实在不会编了',
+									'desc':'在中国不要谈论中国敏感话题，纯属讲课，如有雷同，还是讲课2'	
+								}
+							]	
+						}
+					]
+				}
+			]	
+		},
+		{
+			'tit':'马华腾会见李坤',
+			'href':'www.likun.com',
+			's-tit':[
+				{
+					'tit':'以两岸和平问题进行谈判',
+					'href':'abc.html',
+					'desc':[
+						{
+							'tit1':'见面喊坤哥',
+							'href':'taiwan.com',	
+						},
+						{
+							'tit2':'没得商量',
+							'desc':'台湾是中国的',
+							'test':[
+								{
+									'tit':'实在不会编了',
+									'desc':'在中国不要谈论中国敏感话题，纯属讲课，如有雷同，还是讲课3'	
+								}
+							]	
+						}
+					]
+				}
+			]	
+		}
+	];
+
+jquery
+	css方法
+	
+obj	
+	数组
+	null
+	json
+	获取的元素
+	
+	
+	
+

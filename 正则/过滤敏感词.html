@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+	var str='持续激发市场活力，是本届政府施政的最大关切之一。独大欧时时挂念的简政放权、放管结合、优化服务，这一系列转变政府职能的体制机制改革，说到底就是为了让更多市场主体少受束缚、不断成长壮大。同时，通过减少审批、加强监管，建立更加公平公正的市场秩序，形成经济发展的活力源泉。市场没有活力，也就谈不上所谓供给侧改革。';
+
+	var reg=/独大欧/g;
+	document.write(str.replace(reg,function(s){
+		var tmp='';
+		for(var i=0; i<s.length; i++){
+			tmp+='**';
+		}
+		return '<span style="color:red;">'+tmp+'</span>';
+	}));
+    </script>
+</head>
+
+<body>
+</body>
+</html>

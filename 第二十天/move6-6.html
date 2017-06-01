@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:100px;height:100px;background:red;position:absolute;top:50px;left:50px;opacity:0.3}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div1');	
+	oDiv.onclick = function(){
+		move(oDiv,{
+			'width':300,
+			'height':250,
+			'top':150,
+			'left':150,
+			'opacity':1
+		},1000);
+	};
+	
+	function move(obj,json,time){
+		var count = Math.floor(time/30);
+		var n = 0;
+		var start = {};
+		var dis = {};
+		for(name in json){
+			start[name] = parseFloat(getStyle(obj,name));
+			dis[name] = json[name] - start[name];
+		}
+		clearInterval(obj.timer);
+		obj.timer = setInterval(function(){
+			n++;
+			for(name in json){
+				if(name == 'opacity'){
+					obj.style[name] = start[name]+dis[name]*n/count;
+				}else{
+					obj.style[name] = start[name]+dis[name]*n/count+'px';
+				}
+			}
+			if(n == count){
+				clearInterval(obj.timer);
+			}
+		},30);
+	}
+	
+	function getStyle(obj,sName){
+		return (obj.currentStyle || getComputedStyle(obj,false))[sName];
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="div1"></div>
+</body>
+</html>

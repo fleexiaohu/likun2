@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+document.onmousewheel=function (ev){
+	
+	//alert('a');
+	
+	//return;
+	
+	var oEvent=ev || event;
+	// 下 负数    上 正数
+	var down=oEvent.wheelDelta>0 ? false : true;
+	//alert(oEvent.wheelDelta);
+	/*
+	if (oEvent.wheelDelta > 0)
+	{
+		// 上
+		var down=false;
+	}
+	else
+	{
+		// 下
+		var down=true;
+	}
+	*/
+	
+	alert(down);
+};
+</script>
+</head>
+
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

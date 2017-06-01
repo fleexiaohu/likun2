@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+	body{height:3000px;}
+	div{width:300px;height:300px;border:5px solid red;font-size:100px;line-height:300px;text-align:center;position:fixed;left:50%;margin-left:-150px;}
+</style>
+<script>
+window.onresize = function(){
+	var oW = document.documentElement.clientWidth;	
+	var oDiv = document.getElementById('div');
+	oDiv.innerHTML = oW;
+};
+</script>
+</head>
+
+<body>
+	<div id="div">0</div>
+</body>
+</html>

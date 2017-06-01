@@ -1,0 +1,62 @@
+字符串操作
+
+数组操作
+
+这个月有多少天？
+
+封闭空间
+	()();
+	
+window.navigator.userAgent; //获取浏览器
+
+//谷歌
+Mozilla/5.0 (Windows NT 6.1; WOW64)
+ AppleWebKit/537.36 (KHTML, like Gecko) 
+ Chrome/49.0.2623.75 Safari/537.36
+
+//火狐
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) 
+Gecko/20100101 Firefox/44.0
+
+//IE10
+Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; 
+WOW64; Trident/6.0; SLCC2; 
+.NET CLR 2.0.50727; .NET CLR 3.5.30729; 
+.NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C)
+
+//IE9
+Mozilla/5.0 (compatible; MSIE 9.0; 
+Windows NT 6.1; WOW64; Trident/5.0)
+
+封闭空间
+(function(index){
+
+})(i) ****
+
+[json]
+	JSON.stringify 
+	
+for(name in json){
+
+}
+confirm		
+	确认对话框
+prompt 
+	提示对话框
+alert 
+	消息对话框
+
+
+闭包
+	子函数可以用父函数的变量
+
+作业（完不成 杀无赦）
+	美团页面
+	
+	这周代码 五遍
+	
+	快速划过没反应
+		改成封闭空间的写法
+ 
+
+

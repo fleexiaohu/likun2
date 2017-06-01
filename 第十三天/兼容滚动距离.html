@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin:0;padding:0;}
+	body{height:3000px;}
+	div{width:300px;height:300px;border:5px solid red;font-size:100px;line-height:300px;text-align:center;position:fixed;left:50%;margin-left:-150px;}
+</style>
+<script>
+window.onscroll = function(){
+	var oDiv = document.getElementsByTagName('div')[0];
+	//var scrollTop = document.body.scrollTop;
+	var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+	oDiv.innerHTML = scrollTop;
+};
+</script>
+</head>
+	
+<body>
+	<div>0</div>
+</body>
+</html>

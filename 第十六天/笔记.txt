@@ -1,0 +1,160 @@
+
+
+知识点
+
+	获取坐标
+	
+	鼠标跟随
+	1、
+	
+	2、如果加大高度/加大宽度
+	
+	3、固定定位
+	
+	4、鼠标居中
+	
+	5、上 下 左 右
+	
+	6、优化
+	
+	【事件】
+		整个页面加事件 -> document
+
+	【事件对象】
+		事件相关东西，都保存在事件对象中
+		event 不兼容FF
+		ev    不兼容IE低版本
+
+	【鼠标坐标】
+		clientX
+		clientY
+		注意：可视区为参照物计算
+		解决：fixed 或者 +scrollLeft/scrollTop
+
+	【事件冒泡】
+		操作子级，能触发父级的事件
+		注意：
+			1. 子级有没有事件，都会冒泡
+			2. 冒泡与位置无关
+
+		取消冒泡
+			子级
+			oEvent.cancelBubble=true;
+
+	【阻止默认事件】
+		return false;
+			不选中文字 -> onmousedown return false
+			右键       -> oncontextmenu return false
+			不能输入   -> onkeydown  return false
+
+	【键盘事件】
+		oEvent.keyCode
+			32  空格
+			13  回车
+			8   退格
+			48  0
+			57  9
+			37 左
+			38 上
+			39 右
+			40 下
+		oEvent.ctrlKey  
+		oEvent.shiftKey
+		oEvent.altKey
+
+	【新事件】
+		oncontextmenu 右键
+		onmousemove   移动
+		onkeydown     按下去（先）
+		onkeyup       抬起
+
+	【oEvent】
+		oEvent.clientX / clientY
+		oEvent.cancelBubble=true;
+		oEvent.keyCode
+		oEvent.ctrlKey / altKey / shiftKey
+
+	【注意】
+		if  条件会同时发生
+		if  else if 条件不能同时发生
+
+		定时器
+			开之前，最好先关
+				不要频繁开关定时器——卡
+
+		调用频繁的事件，事件中最好不要放太复杂代码
+
+
+整理单词
+-----------------------
+	事件对象
+		ev
+		event
+	坐标
+		clientX
+		clientY
+	冒泡
+
+	取消冒泡
+		子级
+		oEvent.cancelBubble=true;
+
+	默认事件
+		return false *
+
+	新事件
+		onmousemove
+		onkeydown
+		onkeyup
+		oncontextmenu
+
+	键盘
+		oEvent.keyCode
+			xxxx
+		oEvent.ctrlKey ....
+
+单词
+-----------------------
+	事件绑定
+		addEventListener
+		attachEvent
+
+		removeEventListener
+		detachEvent
+
+		oEvent.preventDefault()
+
+	事件委托
+		oEvent.srcElement 
+		oEvent.target
+
+	out 与 over 问题
+		oEvent.fromElement
+		oEvent.toElement
+
+	滚轮
+		onmousewheel
+		DOMMouseScroll
+		
+【知识点】
+	鼠标跟随
+	事件冒泡 btn div
+	下拉框 document  obtn display：none
+	不能输入文本框 onkeydown
+	
+	键盘事件
+		document.onkeydown 
+		oEvent.keyCode
+		oEvent.ctrlKey
+	全选
+	不能复制
+	只能输入数字
+	键盘控制div
+	拖拽
+	down
+	
+	右键效果
+	让一个数组框不能输入数字
+	
+//https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=你好
+//https://sug.so.360.cn/suggest?callback=suggest_so&encodein=utf-8&encodeout=utf-8&format=json&fields=word,obdata&word=%E6%9D%8E%E5%9D%A4

@@ -1,0 +1,111 @@
+封装函数
+	css ？
+	getByclassName ？
+	
+json
+
+字符串操作
+
+数组操作
+
+window.navigator.userAgent
+
+这个月有多少天
+
+封闭空间
+(function(接收){})(i);
+闭包
+	子函数可以使用父函数的变量
+	
+children 
+	
+var oImg = new Imgage();
+new Date();
+ew Array();
+new Function();
+new Imgage;
+js 数据类型（严格来说只有一种obj）
+
+	字符串
+	obj
+	function 
+	undefined
+	number
+	boolean
+		true false
+		
+alert(); //消息对话框 返回值 undefined
+prompt();//提示对话框 返回值 返回你输入的值
+confirm(); //确认对话框 true false
+
+json（玩烂了）
+
+json 排序
+
+后台给的json
+
+select
+
+	孙领会5*5*5 如果你没写
+	李伟10
+	小朋10  话费
+	宋艳军20 value 添加add 2遍css方法
+	栋栋  5 提示框
+	彭姐 添加 10
+	波箱 5
+	
+	杜东宇 5 getclassName
+	小强 10 getclassName
+	
+	小朋 15
+	田建航 20 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//得到焦点
+	onfocus
+//失去焦点
+	onblur
+
+webpack //新浪
+grunt
+glup
+
+nodejs
+php
+bootstrop
+less
+angularjs == jquery
+
+zepto （手机端框架）
+jquerymobile
+
+
+git == svn
+
+
+
+
+
+
+
+
+	
+
+
+
+

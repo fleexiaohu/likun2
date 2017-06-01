@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	li{width:90%;height:40px;background:#ccc;margin:10px;}
+</style>
+<script>
+window.onload = function(){
+	var oUl = document.getElementById('ul1');
+	//oUl.firstElementChild.style.background = 'red';
+	//oUl.firstChild.style.background = 'red';
+	
+	//oUl.lastElementChild.style.background = 'red';<br>
+	//oUl.lastChild.style.background = 'red';
+	
+	/*if(oUl.lastElementChild){
+		oUl.lastElementChild.style.background = 'red';
+	}else{
+		oUl.lastChild.style.background = 'red';
+	}*/
+	var oLast = oUl.lastElementChild || oUl.lastChild;
+	
+	oLast.style.background = 'green';
+
+};
+</script>
+</head>
+
+<body>
+	<ul id="ul1">
+    	<li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

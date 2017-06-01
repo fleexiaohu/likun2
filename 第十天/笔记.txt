@@ -1,0 +1,30 @@
+逗号表达式
+
+var a=(1,2);
+
+预解析
+
+window
+
+数学方法
+
+删除数组
+for --
+清空数组
+pop
+shift
+splice(0,1)
+
+判断json在不在json中
+
+while
+
+	Math.PI;
+	Math.ceil(); //向上
+	Math.floor(); 向下
+	Math.round();5
+	Math.max(num,num,......);
+	Math.min(num,num,......);
+	Math.sqrt(16)
+	Math.pow();
+	Math.abs();

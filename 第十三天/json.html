@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script>
+var data=[
+		{
+			'txt':'珠宝首饰',
+			'href':'http://baidu.com',
+			's-tit':[
+				{
+					'txt':'蜜蜡',
+					'href':'http://taobao.com',
+				},
+				{
+					'txt':'玉镯',
+					'href':'http://jd.com',
+				}
+			]
+		},
+		{
+			'txt':'时尚饰品',
+			'href':'http://baidu.com',
+			's-tit':[
+				{
+					'txt':'手串',
+					'href':'http://taobao.com',
+				},
+				{
+					'txt':'发饰',
+					'href':'http://jd.com',
+				}
+			]
+		},
+		{
+			'txt':'当季热卖',
+			'href':'http://baidu.com',
+			's-tit':[
+				{
+					'txt':'吊坠',
+					'href':'http://taobao.com',
+				},
+				{
+					'txt':'毛衣链',
+					'href':'http://jd.com',
+				}
+			]
+		}
+	];
+	window.onload = function(){
+		var oDl = document.getElementById('dl1');
+		for(var i=0;i<data.length;i++){
+			var json = data[i];
+			var oDt = document.createElement('dt');
+			oDt.innerHTML = '<a href="'+json.href+'">'+json.txt+'</a>';
+			var oDd = document.createElement('dd');
+			for(var j=0;j<json['s-tit'].length;j++){
+				var json2 = json['s-tit'][j];
+				var oA = document.createElement('a');
+				oA.href=json2.href;
+				oA.innerHTML = json2.txt;
+				oDd.appendChild(oA);
+			}
+			oDl.appendChild(oDt);
+			oDl.appendChild(oDd);
+		}
+	};
+</script>
+</head>
+
+<body>
+	<dl id="dl1">
+    <dt>分类</dt>
+        <dd>1</dd>
+        <dd>2</dd>
+        <dd>3</dd>
+    </dl>
+</body>
+</html>

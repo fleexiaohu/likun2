@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0;}
+div{width:100px;height:100px;background:tomato;position:absolute;top:50px;left:50px;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div');
+	//加点击事件
+	oDiv.onclick = function(){
+		//move(oDiv,'top',400,2000);
+		move(oDiv,'left',100,100)	
+	};	
+	
+	function move(obj,sName,target,time){
+		//距离
+		var dis = target - parseInt(getStyle(obj,sName));
+		//总次数
+		var count = Math.floor(time/30);
+		//当前次数
+		var n = 0;
+		//起点
+		var start = parseInt(getStyle(obj,sName));
+		
+		var timer = setInterval(function(){
+			n++;
+			obj.style[sName] = start+dis*n/count+'px';	
+			if(n == count){
+				clearInterval(timer);
+			}
+		},30);
+		
+	}
+	
+	function getStyle(obj,sName){
+		return (obj.currentStyle || getComputedStyle(obj,false))[sName];
+	}
+};
+</script>
+</head>
+
+<body>
+	<div id="div"></div>
+</body>
+</html>

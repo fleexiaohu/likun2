@@ -1,0 +1,94 @@
+json数组
+DOM操作
+留言板
+编码
+强制获取焦点
+引用
+逗号表达式
+冒泡排序
+声明函数
+声明数组
+try{
+}catch(e) { //error
+}
+赋值表达式
+删除数组
+清空数组
+预解析
+数学函数
+判断json在不在json中
+json排序
+话费效果
+select
+onblur
+onfocus
+if('sex' in json){
+}else{
+}
+
+DOM操作	
+	获取
+		children // 第一级子集
+		parentNode // 父级
+	第一个
+		firstElementChild //高级浏览器
+		firstChild //IE8-
+	最后一个
+		lastElementChild //
+		lastChild
+	上一个
+		previousElementSibling //高级浏览器
+		previousSibling //IE8-
+	下一个
+		nextElementSibling //高级浏览器
+		nextSibling //
+		
+	创建标签
+		byid
+		createElement('标签名字');
+		不能改变父级document
+	插入
+		父级.appendChild('子集对象');
+		父级.insertBefore(插入谁，在谁之前);
+		
+	删除
+		父级.removeChild(子集);
+		
+【知识点】
+	offsetWidth 获取元素的宽度 ？ ****他有没有px
+	offsetHeight 获取元素的高度 也没有px
+	它与margin 没有任何关系 只获取自身的宽高
+	（盒子模型的大小）
+	
+	offsetLeft 获取元素定位父级的距离 -left 如果说它没有定位父级默认body
+	offsetTop 获取元素定位父级的距离-top 如果说它没有定位父级默认body
+	
+	offsetParent 获取定位父级的元素
+	parentNode 获取HTML结构上的父级
+	
+	当display：none的时候获取不到所有offset相关的东西
+	
+	可视区的宽高
+		document.documentElement.clientHeight
+	可视区的高度
+		document.documentElement.clientWidth
+		
+	获取滚动距离
+		window.onload
+		window.onresize //可视区发生改变的时候
+		window.onscroll //滚动的时候
+		
+	document.body.scrollTop //只兼容google浏览器
+	document.documentElement.scrollTop //兼容ie&&firefox
+	document.body.scrollTop || document.documentElement.scrollTop;	
+		
+	
+	
+	
+
+
+
+
+
+
+
